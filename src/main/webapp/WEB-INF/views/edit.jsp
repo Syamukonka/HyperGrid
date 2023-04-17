@@ -15,6 +15,18 @@
 </head>
 <body>
 <div class="container">
+    <%@ include file="banner.jsp"%>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            document.getElementById("return").style.visibility = "collapse";
+        });
+
+    </script>
+    <div class="row_center w100">
+        <button onclick="history.back()"  class="btn btn-white" href="home"> <i class="fa-solid fa-angle-left mg_r_sm"> </i> Go Back</button>
+
+    </div>
+
     <div class=" pd_sm col_center w100 mg_v_lg">
         <div>
         <% Customer customer = (Customer)request.getAttribute("customer");
@@ -38,15 +50,15 @@
 
             <% String emsg = (String)request.getAttribute("error_message");
                 if(emsg!=null) { %>
-            <div class="pd_md">
-                <p><i class="fa-solid fa-warning"> </i> <%= emsg %> </p>
-            </div>
+                    <div class="pd_md">
+                        <p><i class="fa-solid fa-warning"> </i> <%= emsg %> </p>
+                    </div>
             <% } %>
             <% String smsg = (String)request.getAttribute("success_message");
                 if(smsg!=null) { %>
-            <div class="pd_md">
-                <p><i class="fa-solid fa-check-circle">  </i><%= smsg %></p>
-            </div>
+                    <div class="pd_md">
+                        <p><i class="fa-solid fa-check-circle">  </i><%= smsg %></p>
+                    </div>
             <% } %>
 
             <form action="submitUpdate" method="post" class="w100 pd_md">
@@ -70,8 +82,7 @@
                     <label for="floatingSelect">This customer is </label>
                 </div>
                 <div class="row_between">
-                    <a class="btn btn-dark fw600" href="view?id=<%=customer.getId()%>"><i class="fa-solid fa-xmark mg_r_xs"></i>Close</a>
-                    <button type="submit" class="btn btn-primary" >Update customer</button>
+                    <button type="submit" class="btn btn-success bg_cool_green" >Update customer</button>
                 </div>
             </form>
         </div>

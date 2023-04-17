@@ -9,7 +9,7 @@
 <%@ include file="header.jsp" %>
 <body>
     <div class="container">
-
+        <%@ include file="banner.jsp"%>
         <div class=" pd_sm col_center w100 mg_v_lg">
             <div class="w_100 max_500 rounded-1 items_center shadow">
                 <h3 class="text_center mg_t_md mg_h_md">Add a new Customer</h3>
@@ -17,13 +17,13 @@
                 <% String emsg = (String)request.getAttribute("error_message");
                     if(emsg!=null) { %>
                     <div class="pd_md">
-                        <p><i class="fa-solid fa-warning"> </i> <%= emsg %> </p>
+                        <p class="text_amber"><i class="fa-solid fa-warning mg_r_sm"> </i> <%= emsg %> </p>
                     </div>
                 <% } %>
                 <% String smsg = (String)request.getAttribute("success_message");
                     if(smsg!=null) { %>
                 <div class="pd_md">
-                    <p><i class="fa-solid fa-check-circle">  </i><%= smsg %></p>
+                    <p class="text-success"><i class="fa-solid fa-check-circle mg_r_sm ">  </i><%= smsg %></p>
                 </div>
                 <% } %>
 
@@ -45,9 +45,8 @@
                         </select>
                         <label for="floatingSelect">This customer is </label>
                     </div>
-                    <div class="row_between">
-                        <a class="btn btn-dark fw600" href="home"><i class="fa-solid fa-xmark mg_r_xs"></i>Close</a>
-                        <button type="submit" class="btn btn-primary" >Add <%= smsg!=null && !smsg.isEmpty() ? "another" : "new " %> customer</button>
+                    <div class="row_right">
+                        <button type="submit" class="btn btn-success bg_cool_green" >Add <%= smsg!=null && !smsg.isEmpty() ? "another" : "new " %> customer</button>
                     </div>
                 </form>
             </div>

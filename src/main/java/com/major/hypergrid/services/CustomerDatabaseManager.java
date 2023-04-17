@@ -5,7 +5,7 @@ import com.major.hypergrid.entity.Customer;
 import javax.persistence.*;
 import java.util.ArrayList;
 
-public class CustomerRepository {
+public class CustomerDatabaseManager {
 
     EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("HyperGrid");
     EntityManager entityManager = entityManagerFactory.createEntityManager();

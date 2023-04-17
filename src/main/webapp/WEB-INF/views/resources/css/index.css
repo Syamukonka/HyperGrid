@@ -24,7 +24,16 @@ td{
 }
 
 tr:hover{
-    background-color: #f9f9ee
+    background-color: #f1f2f6
+}
+
+.bg_light1{
+  background-color: #fdfdfd !important;
+  box-shadow: inset 0 10px 15px -10px rgba(229, 229, 231, 0.75);
+}
+
+.bg_cool_green{
+  background: linear-gradient(to right, #75d774, #48b649);
 }
 
 .bg-dim{
@@ -113,7 +122,7 @@ p, h1, h2, h3, h4, h5, h6{
 .text_purple{color: #645CAA}
 .text_blue{color: #007bff }
 .text_pink{color:  #CD4990}
-.text_amber{color: orange}
+.text_amber{color: orange !important}
 
 .text_thin{font-weight: 300}
 .text_reg{font-weight: 400}

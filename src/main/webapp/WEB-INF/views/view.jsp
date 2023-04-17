@@ -28,6 +28,7 @@
     </script>
 </head>
 <body>
+<%@ include file="banner.jsp"%>
 <div class="container">
     <div class=" pd_sm col_center w100 mg_v_lg">
         <div>
@@ -58,7 +59,7 @@
                     </div>
                 </div>
                 <p class="txt_sm mg_t_sm text-secondary"><i class="fa-solid txt_sm fa-location-dot mg_r_xs" ></i> <%= customer.getAddress() %> </p>
-                <p class="txt_sm mg_t_sm text-primary"><i class="fa-solid txt_mn <%= typeIcon %> mg_r_xs" ></i> <%= customer.getType() %> </p>
+                <p class="txt_sm mg_t_sm text-success"><i class="fa-solid txt_mn <%= typeIcon %> mg_r_xs" ></i> <%= customer.getType() %> </p>
             </div>
 
             <hr/>
@@ -90,7 +91,7 @@
                         <input name="id" value="<%= customer.getId() %>" id="id" type="hidden">
                     </div>
                     <div class="row_between items_center">
-                        <button type="submit" class="btn btn-outline-primary">
+                        <button type="submit" class="btn btn-sucess text-white bg_cool_green">
                             <i class="fa-solid fa-sack-dollar mg_r_xs"></i> Process payment
                         </button>
                         <div class="mg_l_lg col_top">

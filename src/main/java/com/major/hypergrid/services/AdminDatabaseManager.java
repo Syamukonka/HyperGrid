@@ -6,7 +6,7 @@ import com.major.hypergrid.entity.User;
 import javax.persistence.*;
 import java.util.ArrayList;
 
-public class AdminRepository {
+public class AdminDatabaseManager {
 
     EntityManagerFactory entityManagerFactory;
     EntityManager entityManager;
