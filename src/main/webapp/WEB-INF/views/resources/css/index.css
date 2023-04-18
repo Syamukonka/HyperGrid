@@ -152,7 +152,6 @@ p, h1, h2, h3, h4, h5, h6{
   transition: ease-in;
 }
 
-
 .shaker_parent:hover .shake_once_child{
   animation: shake 0.3s;
   animation-iteration-count: 1;
