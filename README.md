@@ -1,6 +1,6 @@
 # HyperGrid (Electricity Billing System 2)
 
-_Syamukonka@Code200.com_
+_www.syamukonka.com_
 
 ### Programming Features 
 <ol>
